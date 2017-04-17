@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>knButton</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>let &lt;#button#&gt;: UIButton = {
+        
+        let title = "&lt;#Sample#&gt;"
+        let image = "&lt;#Sample#&gt;"
+        let color = UIColor.&lt;#Color#&gt;
+        
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle(title, for: .normal)
+        button.setTitleColor(color, for: .normal)
+        button.titleLabel?.font = &lt;#Font#&gt;
+        button.setImage(UIImage(named: image), for: .normal)
+        return button
+        
+    }()</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>BCBE5CB6-4FBE-4FED-B5E4-EDEA0AA65EB9</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Create kn Button</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

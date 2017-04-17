@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>vip</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>TopLevel</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>/**
+ Implementation
+ 1. Replace 'Sample' to your controller's name
+ 2. Cut 'var output : SampleControllerOutput? /* output */' to your real controller file -&gt; Delete class 'SampleController'
+ 3. Define actions controller needs in protocol SampleControllerOutput
+ 4. Define actions to respond to result in protocol 'SampleInteractorOutput'. For instance: requestSuccess, updateView...
+ 5. Conform actions from 'SampleControllerOutput' in 'extension SampleInteractor'
+ 6. Conform actions from 'SampleInteractorOutput'
+ 7. Define actions to update directly to UI to 'SamplePresenterOutput'
+ 8. Conform actions and update UI
+ */
+
+
+
+// 2
+class SampleController: fxController {
+    
+    var output : SampleControllerOutput? /* output */
+    
+}
+
+// 3
+protocol SampleControllerOutput: class {
+    
+    /* action from controller */
+    func requestSomething()
+}
+
+// 4
+protocol SampleInteractorOutput: class {
+    
+    func requestComplete()
+}
+
+// 5
+
+extension SampleInteractor: SampleControllerOutput {
+    
+    /* action from controller */
+    func requestSomething() {
+        /* create worker and let it execute */
+    }
+}
+
+// 6: Convert Model to View Model to update UI
+extension SamplePresenter: SampleInteractorOutput {
+    func requestComplete() {
+        // let output do this
+    }
+}
+
+// 7 - Define protocol to update directly to UI
+protocol SamplePresenterOutput: class {
+    func updateView()
+}
+
+// 8 - Update UI
+extension SampleController: SamplePresenterOutput {
+    func updateView() {
+        
+    }
+}
+
+
+
+
+
+class SampleInteractor {
+    
+    var output: SampleInteractorOutput?
+}
+
+class SamplePresenter {
+    
+    weak var output: SamplePresenterOutput?
+}
+
+//MARK: Configuration
+class SampleConfiguration /* called in viewDidLoad */ {
+    
+    static let shared = SampleConfiguration()
+    
+    func configure(viewController: SampleController) {
+        
+        // Presenter
+        let presenter = SamplePresenter()
+        presenter.output = viewController
+        
+        // Interactor
+        let interactor = SampleInteractor()
+        interactor.output = presenter
+        
+        // View controller
+        viewController.output = interactor
+    }
+    
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>298EA13E-11B9-4802-843A-60EE9AD7F7AD</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>VIP Architecture</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

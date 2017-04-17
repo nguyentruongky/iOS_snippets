@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>worker</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>TopLevel</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>
+/**
+ 
+ protocol Worker {
+     func execute()
+ }
+
+*/
+struct SampleWorker : Worker {
+    
+    private let api = "api_url"
+    
+    var successResponse: ((_ something: DataYouWant) -&gt; Void)? = nil
+    var failResponse: ((_ error: ErrorYouWant) -&gt; Void)? = nil
+    
+    func execute() {
+        // do your job here 
+        // call callback after your job done.
+    }
+}
+
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>3AE72260-5317-48D3-A15C-B2423DF41C59</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Worker</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
