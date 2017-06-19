@@ -9,15 +9,14 @@
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>let imageView: UIImageView = {
+	<string>let &lt;#imageView#&gt;: UIImageView = {
         
-        let imageName = ""
-            let iv = UIImageView(image: UIImage(named: imageName))
+        let iv = UIImageView(image: UIImage(named: &lt;#image_name#&gt;))
         iv.translatesAutoresizingMaskIntoConstraints = false
         iv.contentMode = .scaleAspectFill
-iv.clipsToBounds = true 
+        iv.clipsToBounds = true
         return iv
-    }() /* description */</string>
+    }()</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>0C976014-83E6-4593-95BD-B209385F8B28</string>
 	<key>IDECodeSnippetLanguage</key>

@@ -9,8 +9,8 @@
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>let view = UIView()
-        view.translatesAutoresizingMaskIntoConstraints = false</string>
+	<string>let &lt;#view#&gt; = UIView()
+        &lt;#view#&gt;.translatesAutoresizingMaskIntoConstraints = false</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>3003B702-5382-4B2E-A735-1912CFB27F6C</string>
 	<key>IDECodeSnippetLanguage</key>

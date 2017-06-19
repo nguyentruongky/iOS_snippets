@@ -9,32 +9,33 @@
 		<string>TopLevel</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>/**
+	<string>import UIKit
+
+/**
  Implementation
  1. Replace 'Sample' to your controller's name
  2. Cut 'var output : SampleControllerOutput? /* output */' to your real controller file -&gt; Delete class 'SampleController'
  3. Define actions controller needs in protocol SampleControllerOutput
  4. Define actions to respond to result in protocol 'SampleInteractorOutput'. For instance: requestSuccess, updateView...
  5. Conform actions from 'SampleControllerOutput' in 'extension SampleInteractor'
- 6. Conform actions from 'SampleInteractorOutput'
- 7. Define actions to update directly to UI to 'SamplePresenterOutput'
+ 6. Define actions to update directly to UI to 'SamplePresenterOutput'
+ 7. Conform actions from 'SampleInteractorOutput'
  8. Conform actions and update UI
  */
 
 
 
 // 2
-class SampleController: fxController {
+class SampleController: knController {
     
-    var output : SampleControllerOutput? /* output */
+    var output : SampleControllerOutput?
     
 }
 
 // 3
 protocol SampleControllerOutput: class {
     
-    /* action from controller */
-    func requestSomething()
+    func requestFromController()
 }
 
 // 4
@@ -47,23 +48,24 @@ protocol SampleInteractorOutput: class {
 
 extension SampleInteractor: SampleControllerOutput {
     
-    /* action from controller */
-    func requestSomething() {
+    func requestFromController() {
         /* create worker and let it execute */
     }
 }
 
-// 6: Convert Model to View Model to update UI
-extension SamplePresenter: SampleInteractorOutput {
-    func requestComplete() {
-        // let output do this
-    }
-}
-
-// 7 - Define protocol to update directly to UI
+// 6 - Define protocol to update directly to UI
 protocol SamplePresenterOutput: class {
     func updateView()
 }
+
+
+// 7: Convert Model to View Model to update UI
+extension SamplePresenter: SampleInteractorOutput {
+    func requestComplete() {
+        output?.updateView()
+    }
+}
+
 
 // 8 - Update UI
 extension SampleController: SamplePresenterOutput {

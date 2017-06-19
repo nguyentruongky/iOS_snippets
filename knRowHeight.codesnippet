@@ -3,24 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>knView</string>
+	<string>knRowHeight</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>let &lt;#view#&gt;: UIView = {
-        
-        let view = UIView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
-    }()</string>
+	<string>tableView.separatorStyle = .none
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = &lt;#height#&gt;</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>FD7AFB0B-77C8-4E96-B938-89A95878C31C</string>
+	<string>A849B320-5948-4C5A-882D-E94408287D5D</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Create kn View</string>
+	<string>Dynamic Height TableView </string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

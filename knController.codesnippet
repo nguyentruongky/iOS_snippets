@@ -10,7 +10,8 @@
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>
-class SampleController: knController {
+
+class &lt;#SampleController#&gt;: knController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +26,9 @@ class SampleController: knController {
         
     }
     
-}</string>
+}
+
+</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>72C29138-B052-4041-A07A-45B5ADF20F25</string>
 	<key>IDECodeSnippetLanguage</key>

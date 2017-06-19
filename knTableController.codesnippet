@@ -9,11 +9,15 @@
 		<string>TopLevel</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>
-class SampleController: knTableController {
+	<string>class &lt;#TableController#&gt;: knTableController {
+    
+    var datasource = [&lt;#Model#&gt;]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupView()
+        fetchData()
     }
     
     override func setupView() {
@@ -21,7 +25,7 @@ class SampleController: knTableController {
     }
     
     override func registerCells() {
-        
+        tableView.register(&lt;#Cell#&gt;.self, forCellReuseIdentifier: "&lt;#Cell#&gt;")
     }
     
     override func fetchData() {
@@ -29,21 +33,25 @@ class SampleController: knTableController {
     }
 }
 
-extension SampleController {
+extension &lt;#TableController#&gt; {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -&gt; Int {
-        return 0
+        return datasource.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -&gt; UITableViewCell {
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "&lt;#Cell#&gt;", for: indexPath) as! &lt;#Cell#&gt;
+        cell.data = datasource[indexPath.row]
+        return cell
+        
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -&gt; CGFloat {
         return 100
     }
-
-}</string>
+    
+}
+</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>769781C5-709B-42B1-A431-2F1FD2A578BA</string>
 	<key>IDECodeSnippetLanguage</key>

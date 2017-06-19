@@ -10,8 +10,9 @@
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>
-class SampleController: knCollectionController {
+class &lt;#Controller#&gt;: knCollectionController {
     
+    var datasource = [&lt;#Model#&gt;]()
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -19,15 +20,21 @@ class SampleController: knCollectionController {
         fetchData()
     }
     
-    override func registerCells() { }
+    override func registerCells() {
+        collectionView?.register(&lt;#UICollectionViewCell#&gt;.self, forCellWithReuseIdentifier: "&lt;#UICollectionViewCell#&gt;")
+    }
     
-    override func setupView() { }
+    override func setupView() {
     
-    override func fetchData() { }
+    }
+    
+    override func fetchData() {
+    
+    }
 }
 
 
-extension SampleController {
+extension &lt;#Controller#&gt; {
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -&gt; Int {
         return 0
@@ -35,7 +42,9 @@ extension SampleController {
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -&gt; UICollectionViewCell {
         
-        return UICollectionViewCell()
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "&lt;#UICollectionViewCell#&gt;", for: indexPath) as! &lt;#UICollectionViewCell#&gt;
+        cell.data = datasource[indexPath.row]
+        return cell
     }
     
     override func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -&gt; CGFloat {
@@ -46,6 +55,7 @@ extension SampleController {
         return UIScreen.main.bounds.size
     }
 }
+
 
 
 </string>

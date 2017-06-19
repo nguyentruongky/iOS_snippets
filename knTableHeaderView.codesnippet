@@ -3,24 +3,23 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>knView</string>
+	<string>knTableHeaderView</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>All</string>
+		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>let &lt;#view#&gt;: UIView = {
-        
-        let view = UIView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
-    }()</string>
+	<string>tableView.tableHeaderView = UIView()
+        tableView.tableHeaderView?.frame.size.height = &lt;#header_height#&gt;
+        tableView.tableHeaderView?.addSubview(&lt;#headerView#&gt;)
+        tableView.tableHeaderView?.addConstraints(withFormat: "H:|[v0]|", views: &lt;#headerView#&gt;)
+        tableView.tableHeaderView?.addConstraints(withFormat: "V:|[v0]", views: &lt;#headerView#&gt;)</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>FD7AFB0B-77C8-4E96-B938-89A95878C31C</string>
+	<string>A96F17DE-0F67-4DF9-BC64-9163D5AD920F</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Create kn View</string>
+	<string>Table Header View</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
