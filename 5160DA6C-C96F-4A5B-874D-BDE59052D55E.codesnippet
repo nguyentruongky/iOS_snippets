@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>worker</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>struct &lt;#Worker#&gt; {
+private let api = "api"
+private var successAction: ((&lt;#Param#&gt;) -&gt; Void)?
+private var failAction: ((knError) -&gt; Void)?
+init(&lt;#parameters#&gt;successAction: ((&lt;#Param#&gt;) -&gt; Void)?, failAction: ((knError) -&gt; Void)?) {
+self.successAction = successAction
+self.failAction = failAction
+}
+
+func execute() {
+    
+}
+
+private func successResponse(returnData: AnyObject) {
+    
+}
+
+private func failResponse(err: knError) {
+    failAction?(err)
+}
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>5160DA6C-C96F-4A5B-874D-BDE59052D55E</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Create worker</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

@@ -3,24 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>setupApp</string>
+	<string>cll</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>func setupApp() {
-        window = UIWindow(frame: UIScreen.main.bounds)
-        window!.rootViewController = ogeSetting.firstController
-        window!.backgroundColor = UIColor.white
-        window?.makeKeyAndVisible()
-    }</string>
+	<string>let cell = knTableCell()
+
+return cell</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>7DC0DDD4-E418-4571-9A2F-5104DD8F829E</string>
+	<string>F9BED5D7-1C5C-4E29-A237-778ECF0D5C93</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Setup App</string>
+	<string>knTableCell</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

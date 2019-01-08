@@ -3,24 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>setupApp</string>
+	<string>fn</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>func setupApp() {
-        window = UIWindow(frame: UIScreen.main.bounds)
-        window!.rootViewController = ogeSetting.firstController
-        window!.backgroundColor = UIColor.white
-        window?.makeKeyAndVisible()
+	<string>static func &lt;#name#&gt;(&lt;#param#&gt;) {
+        
     }</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>7DC0DDD4-E418-4571-9A2F-5104DD8F829E</string>
+	<string>7BA9F77A-F631-4E3A-97FC-700F0398373F</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Setup App</string>
+	<string>Function</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
